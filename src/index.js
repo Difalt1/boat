@@ -1,24 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Temp from './temperature';
 
-class Nazwa extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {boat:"Bro"}
-  }
-  handleEvent(event){
-    const name = event.target.value;
-    this.setState({boat: name});
-  }
-  render(){
-    return<>
-      <h1>Welcome aboard ! {this.state.boat}</h1>
-      <input type="text" onChange={(event) => this.handleEvent(event)}/>
-    </> 
 
-  }
-}
-const all = (
-  <Nazwa />
-)
-ReactDOM.render(all ,document.getElementById("root"));
+   const app = (
+     <main>
+      <Temp />
+     </main>
+   )
+    ReactDOM.render(app, document.getElementById('root'));
